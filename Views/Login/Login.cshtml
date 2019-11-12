@@ -62,9 +62,7 @@
                     </div>
 
                     <div class="text-center w-full p-t-25 p-b-80">
-                        <a href="#" class="txt1">
-                            Forgot Username / Password?
-                        </a>
+                        <a href="#" class="txt1">Esqueceu seu nome de usuário / senha?</a>
                     </div>
 
                 </form>
@@ -81,6 +79,39 @@
     <script src="~/login/vendor/select2/select2.min.js"></script>
     <!--===============================================================================================-->
     <script src="~/login/js/main.js"></script>
+
+    <script>
+        function Validate()
+        {
+            $.ajax(
+                {
+                    type: "POST", url: '@Url.Action("Validate", "Login")',
+                    data:
+                    {
+                        email: $('#email').val(),
+                        password: $('#password').val()
+                    },
+                    error: function (result)
+                    {
+                        alert("There is a Problem, Try Again!");
+                    },
+
+                    success: function (result)
+                    {
+                        console.log(result);
+
+                        if (result.status == true)
+                        {
+                            window.location.href = '@Url.Action("Index", "Home")';
+                        }
+                        else
+                        {
+                            alert(result.message);
+                        }
+                    }
+                });
+        }
+    </script>
 
 </body>
 </html>
