@@ -1,18 +1,47 @@
 ﻿<ul class="sidebar-menu" data-widget="tree">
     <li class="header">HEADER</li>
     <!-- Optionally, you can add icons to the links -->
-    <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
+    <li class="active"><a href="~/Home/Index"><i class="fa fa-dashboard"></i> <span>Home</span></a></li>
     <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
+
     <li class="treeview">
         <a href="#">
-            <i class="fa fa-link"></i> <span>Multilevel</span>
+            <i class="fa fa-user"></i> <span>Usuários</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
             </span>
         </a>
         <ul class="treeview-menu">
-            <li><a href="#">Link in level 2</a></li>
-            <li><a href="#">Link in level 2</a></li>
+            <li><a href="#">Listar Usuários</a></li>
+            <li><a href="#">Cadastrar Usuários</a></li>
         </ul>
     </li>
+
+    <li class="treeview">
+        <a href="#">
+            <i class="fa fa-id-card-o"></i> <span>Médicos</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+        <ul class="treeview-menu">
+            <li><a href="~/Doctors/Index">Listar Médicos</a></li>
+            <li><a href="~/Doctors/Create">Cadastrar Médicos</a></li>
+        </ul>
+    </li>
+
+    <li class="treeview">
+        <a href="#">
+            <i class="fa fa-blind"></i> <span>Pacientes</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+        <ul class="treeview-menu">
+            <li><a href="#">Listar Pacientes</a></li>
+            <li><a href="#">Cadastrar Pacientes</a></li>
+        </ul>
+    </li>
+
+
 </ul>
