@@ -15,7 +15,7 @@
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-header">
-                    <h3 class="box-title">Manage Doctors</h3>
+                    <h3 class="box-title">Gerenciar Médicos</h3>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
@@ -23,10 +23,10 @@
                         <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Name</th>
-                                <th>Email</th>
+                                <th>Nome</th>
+                                <th>E-mail</th>
                                 <th>Fone</th>
-                                <th>Cadastrado em</th>
+                                <th>Cadastrado</th>
                                 <th>Especialidade</th>
                                 <th>Ações</th>
                             </tr>
@@ -41,7 +41,7 @@
                                     <td>@Html.DisplayFor(modelItem => item.Phone)</td>
                                     <td>@Html.DisplayFor(modelItem => item.Created)</td>
                                     <td>@Html.DisplayFor(modelItem => item.Specialist)</td>
-                                    <td><a href="Doctors/Update/@item.Id">Update</a> | <a href="" onclick="Delete('@item.Id')">Delete</a></td>
+                                    <td><a href="Update/@item.Id">Update</a> | <a href="" onclick="Delete('@item.Id')">Delete</a></td>
                                 </tr>
                             }
                     </table>
@@ -67,7 +67,7 @@
     function Delete(id)
     {
     var txt;
-    var r = confirm("Are you sure you want to Delete?");
+    var r = confirm("Tem certeza de que deseja excluir?");
     if (r == true)
     {
     $.ajax(
@@ -92,7 +92,7 @@
                 }
                 else
                 {
-                    alert("There is a problem, Try Later!");
+                    alert("Há um problema, tente mais tarde!");
                 }
             }
         });
