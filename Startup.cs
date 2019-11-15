@@ -57,7 +57,7 @@ namespace TemplateAdminLTE2
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Login}/{action=Login}/{id?}"); //aqui é defnida a rota principal da aplicação
+                    template: "{controller=Login}/{action=Login}/{id?}");
             });
         }
     }

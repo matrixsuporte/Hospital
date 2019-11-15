@@ -1,12 +1,12 @@
-﻿@model IEnumerable<Hospital.Models.Doctors>
+﻿@model IEnumerable<Hospital.Models.Patients>
 
 <section class="content-header">
     <h1>
-        Médicos
+        Pacientes
     </h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Médicos</li>
+        <li class="active">Pacientes</li>
     </ol>
 </section>
 <!-- Main content -->
@@ -15,7 +15,7 @@
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-header">
-                    <h3 class="box-title">Gerenciar Médicos</h3>
+                    <h3 class="box-title">Gerenciar Pacientes</h3>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
@@ -24,25 +24,29 @@
                             <tr>
                                 <th>Id</th>
                                 <th>Nome</th>
-                                <th>E-mail</th>
                                 <th>Fone</th>
+                                <th>Sexo</th>
+                                <th>condição de saúde</th>
+                                <th>Médico</th>
+                                <th>Enfermeiro</th>
                                 <th>Cadastrado</th>
-                                <th>Epecialidade</th>
                                 <th>Ação</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach (var item in Model)
                             {
-                                <tr>
-                                    <td>@Html.DisplayFor(modelItem => item.Id)</td>
-                                    <td>@Html.DisplayFor(modelItem => item.Name)</td>
-                                    <td>@Html.DisplayFor(modelItem => item.Email)</td>
-                                    <td>@Html.DisplayFor(modelItem => item.Phone)</td>
-                                    <td>@Html.DisplayFor(modelItem => item.Created)</td>
-                                    <td>@Html.DisplayFor(modelItem => item.Specialist)</td>
-                                    <td><a href="Update/@item.Id">Update</a> | <a href="" onclick="Delete('@item.Id')">Delete</a></td>
-                                </tr>
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Phone)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Gender)</td>
+                                <td>@Html.DisplayFor(modelItem => item.HealthCondition)</td>
+                                <td>@Html.DisplayFor(modelItem => item.DoctorId)</td>
+                                <td>@Html.DisplayFor(modelItem => item.NurseId)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Created)</td>
+                                <td><a href="Update/@item.Id">Update</a> | <a href="" onclick="Delete('@item.Id')">Delete</a></td>
+                            </tr>
                             }
                     </table>
                 </div>
@@ -72,7 +76,7 @@
             $.ajax(
             {
                 type: "POST",
-                url: '@Url.Action("Delete", "Doctors")',
+                url: '@Url.Action("Delete", "Nurses")',
                 data: {
                     id: id
                 },
@@ -81,7 +85,7 @@
                 },
                 success: function (result) {
                     if (result == true) {
-                        var baseUrl="/Doctors";
+                        var baseUrl="/Nurses";
                         window.location.reload();
                     }
                     else {

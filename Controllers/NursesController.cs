@@ -7,12 +7,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Hospital.Controllers
 {
-    public class DoctorsController : Controller
+    public class NursesController : Controller
     {
         MyDbContext db = new MyDbContext();
         public ActionResult Index()
         {
-            return View(db.Doctors.ToList());
+            return View(db.Nurses.ToList());
         }
 
         public ActionResult Create()
@@ -21,11 +21,11 @@ namespace Hospital.Controllers
         }
 
         [HttpPost]
-        public ActionResult CreateDoctor(Doctors doctor)
+        public ActionResult CreateNurse(Nurses nurse)
         {
-            db.Doctors.Add(doctor);
+            db.Nurses.Add(nurse);
             db.SaveChanges();
-            return RedirectToAction("Index", "Doctors");
+            return RedirectToAction("Index", "Nurses");
         }
 
         [HttpPost]
@@ -33,8 +33,8 @@ namespace Hospital.Controllers
         {
             try
             {
-                Doctors doctor = db.Doctors.Where(s => s.Id == id).First();
-                db.Doctors.Remove(doctor);
+                Nurses nurse = db.Nurses.Where(s => s.Id == id).First();
+                db.Nurses.Remove(nurse);
                 db.SaveChanges();
                 return true;
             }
@@ -47,19 +47,18 @@ namespace Hospital.Controllers
 
         public ActionResult Update(int id)
         {
-            return View(db.Doctors.Where(s => s.Id == id).First());
+            return View(db.Nurses.Where(s => s.Id == id).First());
         }
 
         [HttpPost]
-        public ActionResult UpdateDoctor(Doctors doctor)
+        public ActionResult UpdateNurse(Nurses nurse)
         {
-            Doctors d = db.Doctors.Where(s => s.Id == doctor.Id).First();
-            d.Name = doctor.Name;
-            d.Email = doctor.Email;
-            d.Phone = doctor.Phone;
-            d.Specialist = doctor.Specialist;
+            Nurses d = db.Nurses.Where(s => s.Id == nurse.Id).First();
+            d.Email = nurse.Email;
+            d.Name = nurse.Name;
+            d.Phone = nurse.Phone;
             db.SaveChanges();
-            return RedirectToAction("Index", "Doctors");
+            return RedirectToAction("Index", "Nurses");
         }
     }
 }
