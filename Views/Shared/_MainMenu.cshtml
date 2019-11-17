@@ -2,7 +2,7 @@
     <li class="header">MENU</li>
     <!-- Optionally, you can add icons to the links -->
     <li class="active"><a href="~/Home/Index"><i class="fa fa-dashboard"></i> <span>Home</span></a></li>
-    
+
 
     <li class="treeview">
         <a href="#">
@@ -19,7 +19,7 @@
 
     <li class="treeview">
         <a href="#">
-            <i class="fa fa-id-card-o"></i> <span>Médicos</span>
+            <i class="fa fa-user-md"></i> <span>Médicos</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -43,6 +43,43 @@
         </ul>
     </li>
 
-    <li><a href="~/Home/Privacy"><i class="fa fa-gears"></i> <span>Sobre</span></a></li>
 
+
+    <li class="treeview">
+        <a href="#">
+            <i class="fa fa-gears"></i> <span>Configurações</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+        <ul class="treeview-menu">
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-user"></i> Administradores
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="~/Admins/Index"><i class="fa fa-search"></i> Listar Admins</a></li>
+                    <li><a href="~/Admins/Create"><i class="fa fa-plus"></i> Cadastrar Admins</a></li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-users"></i> Usuários
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="~/Users/Index"><i class="fa fa-search"></i> Listar Usuários</a></li>
+                            <li><a href="~/Users/Create"><i class="fa fa-plus"></i> Cadastrar Usuários</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+
+
+    <li><a href="~/Home/Privacy"><i class="fa fa-child"></i> <span>Sobre</span></a></li>
 </ul>

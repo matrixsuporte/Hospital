@@ -5,7 +5,7 @@
         Pacientes
     </h1>
     <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="~/Home/Index"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="active">Pacientes</li>
     </ol>
 </section>
@@ -26,7 +26,7 @@
                                 <th>Nome</th>
                                 <th>Fone</th>
                                 <th>Sexo</th>
-                                <th>condição de saúde</th>
+                                <th>Saúde</th>
                                 <th>Médico</th>
                                 <th>Enfermeiro</th>
                                 <th>Cadastrado</th>
@@ -45,7 +45,7 @@
                                 <td>@Html.DisplayFor(modelItem => item.DoctorId)</td>
                                 <td>@Html.DisplayFor(modelItem => item.NurseId)</td>
                                 <td>@Html.DisplayFor(modelItem => item.Created)</td>
-                                <td><a href="Update/@item.Id">Update</a> | <a href="" onclick="Delete('@item.Id')">Delete</a></td>
+                                <td><a href="Update/@item.Id">Atualizar</a> | <a href="" onclick="Delete('@item.Id')">Excluir</a></td>
                             </tr>
                             }
                     </table>

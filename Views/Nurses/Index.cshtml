@@ -5,7 +5,7 @@
         Enfermeiros
     </h1>
     <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="~/Home/Index"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="active">Enfermeiros</li>
     </ol>
 </section>
@@ -39,7 +39,7 @@
                                     <td>@Html.DisplayFor(modelItem => item.Email)</td>
                                     <td>@Html.DisplayFor(modelItem => item.Phone)</td>
                                     <td>@Html.DisplayFor(modelItem => item.Created)</td>
-                                    <td><a href="Update/@item.Id">Update</a> | <a href="" onclick="Delete('@item.Id')">Delete</a></td>
+                                    <td><a href="Update/@item.Id">Atualizar</a> | <a href="" onclick="Delete('@item.Id')">Excluir</a></td>
                                 </tr>
                             }
                     </table>

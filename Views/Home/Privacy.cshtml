@@ -1,6 +1,336 @@
 ﻿@{
     ViewData["Title"] = "Privacy Policy";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<section class="content">
+
+    <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title">Definição de Modelagem de dados e o modelo conceitual, modelo lógico e modelo físico.</h3>
+
+            <div class="box-tools pull-right">
+                <span class="label label-danger">4 Membros</span>
+                <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                    <i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body no-padding">
+
+            <div class="col-md-6">
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Estrutura aplicada no projeto</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="box-group" id="accordion">
+                            <!-- we are adding the .panel class so bootstrap.js collapse plugin detects it -->
+
+                            <div class="panel box box-primary">
+                                <div class="box-header with-border">
+                                    <h4 class="box-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseModelagem" aria-expanded="false" class="collapsed">
+                                            Técnicas de modelagem de dados
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseModelagem" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                    <div class="box-body">
+                                        A <strong>modelagem de dados</strong> é uma <strong>técnica</strong> usada para a especificação das regras de negócios
+                                        e as estruturas de dados de um banco de dados. Ela faz parte do ciclo de desenvolvimento de um sistema de informação
+                                        e é de vital importância para o bom resultado do projeto. Modelar dados consiste em desenhar o sistema de informações,
+                                        concentrando-se nas entidades lógicas e nas dependências lógicas entre essas entidades.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel box box-primary">
+                                <div class="box-header with-border">
+                                    <h4 class="box-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseModelagem2" aria-expanded="false" class="collapsed">
+                                            Aplicações teóricas e práticas
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseModelagem2" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                    <div class="box-body">
+                                        A <strong>modelagem de dados</strong> ou <strong>modelagem de banco de dados</strong> envolve
+                                        uma série de aplicações teóricas e práticas, visando construir um modelo de dados consistente,
+                                        não redundante e perfeitamente aplicável em <strong>qualquer SGBD moderno</strong>.
+                                    </div>
+                                    <p>A modelagem de dados está dividida em:</p>
+                                </div>
+                            </div>
+
+                            <div class="panel box box-danger">
+                                <div class="box-header with-border">
+                                    <h4 class="box-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" class="collapsed">
+                                            Modelo Conceitual
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                    <div class="box-body">
+                                        A modelagem conceitual basea-se no mais alto nível e deve ser usada para envolver o cliente,
+                                        pois o foco aqui é discutir os aspectos do negócio do cliente e não da tecnologia.
+                                        Os exemplos de modelagem de dados vistos pelo modelo conceitual são mais fáceis de compreender,
+                                        já que não há limitações ou aplicação de tecnologia específica.
+                                        O diagrama de dados que deve ser construído aqui é o Diagrama de Entidade e Relacionamento,
+                                        onde deverão ser identificados todas as entidades e os relacionamentos entre elas.
+                                        Este diagrama é a chave para a compreensão do modelo conceitual de dados.
+                                    </div>
+                                    <p>Ao lado podemos ver um exemplo simples de <strong>DER</strong> Diagrama de Entidade e Relacionamento</p>
+                                </div>
+                            </div>
+
+                            <div class="panel box box-danger">
+                                <div class="box-header with-border">
+                                    <h4 class="box-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="collapsed" aria-expanded="false">
+                                            Modelo Lógico
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                    <div class="box-body">
+                                        O modelo lógico já leva em conta algumas limitações e implementa recursos como adequação de padrão e nomenclatura,
+                                        define as <strong>chaves primárias e estrangeiras</strong>, normalização, integridade referencial,
+                                        entre outras. Para o modelo lógico deve ser criado levando em conta os exemplos de modelagem de dados criados no modelo conceitual.
+                                    </div>
+                                    Exemplo do diagrama de banco de dados gerado.
+                                </div>
+                            </div>
+                            <div class="panel box box-danger">
+                                <div class="box-header with-border">
+                                    <h4 class="box-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed" aria-expanded="false">
+                                            Modelo Físico
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                    <div class="box-body">
+                                        No modelo físico fazemos a modelagem física do modelo de banco de dados.
+                                        Neste caso leva-se em conta as limitações impostas pelo SGBD escolhido
+                                        e deve ser criado sempre com base nos exemplos de modelagem de dados produzidos no item anterior, modelo lógico.
+                                    </div>
+                                    Exemplo do diagrama de banco de dados gerado. O modelo citado foi desenvolvido em SQL para banco relacional.
+                                </div>
+                            </div>
+
+                            <button type="button" class="btn btn-dropbox" data-toggle="modal" data-target="#modal-default">
+                                Abrir Script
+                            </button>
+                            <div class="modal fade" id="modal-default">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                            <h4 class="modal-title">Modelo Físico</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <code>
+                                                <dl>
+                                                    <dd>-- Database: `hospital_db`</dd>
+                                                    <dd>--</dd>
+                                                    <dd>CREATE DATABASE IF NOT EXISTS `hospital_db` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;</dd>
+                                                    <dd>USE `hospital_db`;</dd>
+                                                    <dd>-- --------------------------------------------------------</dd>
+                                                    <dd>-- Estrutura da tabela `admins`</dd>
+                                                    <dd>DROP TABLE IF EXISTS `admins`;</dd>
+                                                    <dd>CREATE TABLE IF NOT EXISTS `admins` (</dd>
+                                                    <dd>  `id` int(11) NOT NULL AUTO_INCREMENT,</dd>
+                                                    <dd>  `name` varchar(255) NOT NULL,</dd>
+                                                    <dd>  `email` varchar(255) NOT NULL,</dd>
+                                                    <dd>  `password` varchar(255) NOT NULL,</dd>
+                                                    <dd>  `phone` varchar(15) NOT NULL,</dd>
+                                                    <dd>  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,</dd>
+                                                    <dd>  PRIMARY KEY (`id`)</dd>
+                                                    <dd>) ENGINE=InnoDB  DEFAULT CHARSET=latin1;</dd>
+
+                                                    <dd>-- --------------------------------------------------------</dd>
+                                                    <dd>-- Estrutura da tabela `doctors`</dd>
+
+                                                    <dd>DROP TABLE IF EXISTS `doctors`;</dd>
+                                                    <dd>CREATE TABLE IF NOT EXISTS `doctors` (</dd>
+                                                    <dd>  `id` int(11) NOT NULL AUTO_INCREMENT,</dd>
+                                                    <dd>  `name` varchar(255) NOT NULL,</dd>
+                                                    <dd>  `email` varchar(255) NOT NULL,</dd>
+                                                    <dd>  `password` varchar(255) NOT NULL,</dd>
+                                                    <dd>  `phone` varchar(15) NOT NULL,</dd>
+                                                    <dd>  `gender` int(11) NOT NULL,</dd>
+                                                    <dd>  `specialist` varchar(255) NOT NULL,</dd>
+                                                    <dd>  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,</dd>
+                                                    <dd>  PRIMARY KEY (`id`)</dd>
+                                                    <dd>) ENGINE=InnoDB  DEFAULT CHARSET=latin1;</dd>
+
+                                                    <dd>-- --------------------------------------------------------</dd>
+                                                    <dd>-- Estrutura da tabela `nurses`</dd>
+
+                                                    <dd>DROP TABLE IF EXISTS `nurses`;</dd>
+                                                    <dd>CREATE TABLE IF NOT EXISTS `nurses` (</dd>
+                                                    <dd>  `id` int(11) NOT NULL AUTO_INCREMENT,</dd>
+                                                    <dd>  `name` varchar(255) NOT NULL,</dd>
+                                                    <dd>  `email` varchar(255) NOT NULL,</dd>
+                                                    <dd>  `password` varchar(255) NOT NULL,</dd>
+                                                    <dd>  `phone` varchar(15) NOT NULL,</dd>
+                                                    <dd>  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,</dd>
+                                                    <dd>  PRIMARY KEY (`id`)</dd>
+                                                    <dd>) ENGINE=InnoDB  DEFAULT CHARSET=latin1;</dd>
+
+                                                    <dd>-- --------------------------------------------------------</dd>
+                                                    <dd>-- Estrutura da tabela `patients`</dd>
+
+                                                    <dd>DROP TABLE IF EXISTS `patients`;</dd>
+                                                    <dd>CREATE TABLE IF NOT EXISTS `patients` (</dd>
+                                                    <dd>  `id` int(11) NOT NULL AUTO_INCREMENT,</dd>
+                                                    <dd>  `name` varchar(255) NOT NULL,</dd>
+                                                    <dd>  `phone` varchar(15) NOT NULL,</dd>
+                                                    <dd>  `gender` int(11) NOT NULL,</dd>
+                                                    <dd>  `health_condition` varchar(255) NOT NULL,</dd>
+                                                    <dd>  `doctor_id` int(11) NOT NULL,</dd>
+                                                    <dd>  `nurse_id` int(11) NOT NULL,</dd>
+                                                    <dd>  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,</dd>
+                                                    <dd>  PRIMARY KEY (`id`),</dd>
+                                                    <dd>  KEY `doctor_id` (`doctor_id`),</dd>
+                                                    <dd>  KEY `nurse_id` (`nurse_id`)</dd>
+                                                    <dd>) ENGINE=InnoDB  DEFAULT CHARSET=latin1;</dd>
+
+
+                                                    <dd>ALTER TABLE `patients`</dd>
+                                                    <dd>  ADD CONSTRAINT `patients_ibfk_1` FOREIGN KEY (`doctor_id`) REFERENCES `doctors` (`id`),</dd>
+                                                    <dd>  ADD CONSTRAINT `patients_ibfk_2` FOREIGN KEY (`nurse_id`) REFERENCES `nurses` (`id`);</dd>
+
+                                                </dl>
+                                            </code>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Sair</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+
+            <div class="col-md-6">
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Imagens de Exemplos</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img src="~/dist/img/Modelo_conceitual.jpeg" alt="Modelo conceitual">
+
+                                    <div class="carousel-caption text-blue">
+                                        Modelo conceitual
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="~/dist/img/Modelo_logico.png" alt="Modelo Lógico">
+
+                                    <div class="carousel-caption text-blue">
+                                        Modelo Lógico
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="~/dist/img/Modelo_conceitual.jpeg" alt="Modelo Físico">
+
+                                    <div class="carousel-caption text-blue">
+                                        Modelo Físico
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                <span class="fa fa-angle-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                <span class="fa fa-angle-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+
+
+            <!-- /.users-list -->
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer text-center">
+            <p>Fonte de Pesquisa para o desenvolvimento </p><a href="https://www.luis.blog.br/modelagem-de-dados-modelo-conceitual-modelo-logico-e-fisico.html" target="_blank">https://www.luis.blog.br/modelagem-de-dados-modelo-conceitual-modelo-logico-e-fisico.html</a>
+        </div>
+        <!-- /.box-footer -->
+    </div>
+
+    <div class="box box-danger">
+        <div class="box-header with-border">
+            <h3 class="box-title">Nossa Equipe</h3>
+
+            <div class="box-tools pull-right">
+                <span class="label label-danger">4 Membros</span>
+                <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                    <i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body no-padding">
+            <ul class="users-list clearfix">
+                <li>
+                    <img src="~/dist/img/eduardo.jpg" alt="User Image">
+                    <a class="users-list-name" href="#">Eduardo Fernandes</a>
+                    <span class="users-list-date">RA: 181000846</span>
+                </li>
+                <li>
+                    <img src="~/dist/img/Italo.jpg" alt="User Image">
+                    <a class="users-list-name" href="#">Ítalo Mesquita</a>
+                    <span class="users-list-date">RA: 181000846</span>
+                </li>
+                <li>
+                    <img src="~/dist/img/Lucas_Recine.jpg" alt="User Image">
+                    <a class="users-list-name" href="#">Lucas Recine</a>
+                    <span class="users-list-date">RA: 181000846</span>
+                </li>
+                <li>
+                    <img src="~/dist/img/Lucas_Silva.jpg" alt="User Image">
+                    <a class="users-list-name" href="#">Lucas Silva</a>
+                    <span class="users-list-date">RA: 181000846</span>
+                </li>
+            </ul>
+            <!-- /.users-list -->
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer text-center">
+            <a href="javascript:void(0)" class="uppercase">Equipe de Desenvolvimento</a>
+        </div>
+        <!-- /.box-footer -->
+    </div>
+</section>
+
